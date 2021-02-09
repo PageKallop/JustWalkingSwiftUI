@@ -13,7 +13,38 @@
 		C0FF50C725D316D90052510F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0FF50C625D316D90052510F /* Assets.xcassets */; };
 		C0FF50CA25D316D90052510F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0FF50C925D316D90052510F /* Preview Assets.xcassets */; };
 		C0FF50CD25D316D90052510F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0FF50CB25D316D90052510F /* LaunchScreen.storyboard */; };
+		C0FF50DC25D32B6A0052510F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0FF50DB25D32B6A0052510F /* WidgetKit.framework */; };
+		C0FF50DE25D32B6A0052510F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0FF50DD25D32B6A0052510F /* SwiftUI.framework */; };
+		C0FF50E125D32B6A0052510F /* JustWalking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FF50E025D32B6A0052510F /* JustWalking.swift */; };
+		C0FF50E425D32B6B0052510F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0FF50E325D32B6B0052510F /* Assets.xcassets */; };
+		C0FF50E625D32B6B0052510F /* JustWalking.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C0FF50E225D32B6A0052510F /* JustWalking.intentdefinition */; };
+		C0FF50E725D32B6B0052510F /* JustWalking.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C0FF50E225D32B6A0052510F /* JustWalking.intentdefinition */; };
+		C0FF50EA25D32B6B0052510F /* JustWalkingExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C0FF50D925D32B6A0052510F /* JustWalkingExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C0FF50E825D32B6B0052510F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0FF50B525D316D80052510F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0FF50D825D32B6A0052510F;
+			remoteInfo = JustWalkingExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C0FF50EE25D32B6B0052510F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C0FF50EA25D32B6B0052510F /* JustWalkingExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C0FF50BD25D316D80052510F /* JustWalkingSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustWalkingSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +55,13 @@
 		C0FF50C925D316D90052510F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C0FF50CC25D316D90052510F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0FF50CE25D316D90052510F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0FF50D925D32B6A0052510F /* JustWalkingExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JustWalkingExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0FF50DB25D32B6A0052510F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C0FF50DD25D32B6A0052510F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C0FF50E025D32B6A0052510F /* JustWalking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustWalking.swift; sourceTree = "<group>"; };
+		C0FF50E225D32B6A0052510F /* JustWalking.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = JustWalking.intentdefinition; sourceTree = "<group>"; };
+		C0FF50E325D32B6B0052510F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0FF50E525D32B6B0052510F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +72,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0FF50D625D32B6A0052510F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0FF50DE25D32B6A0052510F /* SwiftUI.framework in Frameworks */,
+				C0FF50DC25D32B6A0052510F /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -41,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				C0FF50BF25D316D80052510F /* JustWalkingSwiftUI */,
+				C0FF50DF25D32B6A0052510F /* JustWalking */,
+				C0FF50DA25D32B6A0052510F /* Frameworks */,
 				C0FF50BE25D316D80052510F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				C0FF50BD25D316D80052510F /* JustWalkingSwiftUI.app */,
+				C0FF50D925D32B6A0052510F /* JustWalkingExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +125,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		C0FF50DA25D32B6A0052510F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0FF50DB25D32B6A0052510F /* WidgetKit.framework */,
+				C0FF50DD25D32B6A0052510F /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0FF50DF25D32B6A0052510F /* JustWalking */ = {
+			isa = PBXGroup;
+			children = (
+				C0FF50E025D32B6A0052510F /* JustWalking.swift */,
+				C0FF50E225D32B6A0052510F /* JustWalking.intentdefinition */,
+				C0FF50E325D32B6B0052510F /* Assets.xcassets */,
+				C0FF50E525D32B6B0052510F /* Info.plist */,
+			);
+			path = JustWalking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,15 +155,34 @@
 				C0FF50B925D316D80052510F /* Sources */,
 				C0FF50BA25D316D80052510F /* Frameworks */,
 				C0FF50BB25D316D80052510F /* Resources */,
+				C0FF50EE25D32B6B0052510F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C0FF50E925D32B6B0052510F /* PBXTargetDependency */,
 			);
 			name = JustWalkingSwiftUI;
 			productName = JustWalkingSwiftUI;
 			productReference = C0FF50BD25D316D80052510F /* JustWalkingSwiftUI.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C0FF50D825D32B6A0052510F /* JustWalkingExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0FF50EB25D32B6B0052510F /* Build configuration list for PBXNativeTarget "JustWalkingExtension" */;
+			buildPhases = (
+				C0FF50D525D32B6A0052510F /* Sources */,
+				C0FF50D625D32B6A0052510F /* Frameworks */,
+				C0FF50D725D32B6A0052510F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JustWalkingExtension;
+			productName = JustWalkingExtension;
+			productReference = C0FF50D925D32B6A0052510F /* JustWalkingExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -105,6 +194,9 @@
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					C0FF50BC25D316D80052510F = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					C0FF50D825D32B6A0052510F = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -123,6 +215,7 @@
 			projectRoot = "";
 			targets = (
 				C0FF50BC25D316D80052510F /* JustWalkingSwiftUI */,
+				C0FF50D825D32B6A0052510F /* JustWalkingExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -138,6 +231,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0FF50D725D32B6A0052510F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0FF50E425D32B6B0052510F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -145,13 +246,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0FF50E725D32B6B0052510F /* JustWalking.intentdefinition in Sources */,
 				C0FF50C125D316D80052510F /* AppDelegate.swift in Sources */,
 				C0FF50C325D316D80052510F /* SceneDelegate.swift in Sources */,
 				C0FF50C525D316D80052510F /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0FF50D525D32B6A0052510F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0FF50E625D32B6B0052510F /* JustWalking.intentdefinition in Sources */,
+				C0FF50E125D32B6A0052510F /* JustWalking.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C0FF50E925D32B6B0052510F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0FF50D825D32B6A0052510F /* JustWalkingExtension */;
+			targetProxy = C0FF50E825D32B6B0052510F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C0FF50CB25D316D90052510F /* LaunchScreen.storyboard */ = {
@@ -284,6 +403,7 @@
 		C0FF50D225D316D90052510F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,6 +425,7 @@
 		C0FF50D325D316D90052510F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -318,6 +439,48 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Marie.Kallop.JustWalkingSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C0FF50EC25D32B6B0052510F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WRC4QXXN5V;
+				INFOPLIST_FILE = JustWalking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Marie.Kallop.JustWalkingSwiftUI.JustWalking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C0FF50ED25D32B6B0052510F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WRC4QXXN5V;
+				INFOPLIST_FILE = JustWalking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Marie.Kallop.JustWalkingSwiftUI.JustWalking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -340,6 +503,15 @@
 			buildConfigurations = (
 				C0FF50D225D316D90052510F /* Debug */,
 				C0FF50D325D316D90052510F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0FF50EB25D32B6B0052510F /* Build configuration list for PBXNativeTarget "JustWalkingExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0FF50EC25D32B6B0052510F /* Debug */,
+				C0FF50ED25D32B6B0052510F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
