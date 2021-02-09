@@ -10,6 +10,9 @@ import CoreMotion
 
 struct ContentView: View {
     
+    @AppStorage("stepCount", store: UserDefaults(suiteName: "group.com.Marie.Kallop.JustWalkingSwiftUI"))
+    var stepCount: Int = 0
+    
     private let pedometer: CMPedometer = CMPedometer()
     
     @State private var steps: Int?
@@ -23,6 +26,7 @@ struct ContentView: View {
     
     private func updateUI(data: CMPedometerData) {
         
+        stepCount = data.numberOfSteps.intValue
         steps = data.numberOfSteps.intValue
         
         guard let pedometerDistance
