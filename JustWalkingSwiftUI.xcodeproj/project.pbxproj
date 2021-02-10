@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0A55B3025D450810068DA24 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A55B2F25D450810068DA24 /* GraphView.swift */; };
 		C0DDCD7725D43385001B844D /* WalkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DDCD7625D43385001B844D /* WalkingView.swift */; };
 		C0DDCD7B25D433CA001B844D /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DDCD7A25D433CA001B844D /* HealthStore.swift */; };
 		C0DDCD7F25D43B23001B844D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0DDCD7E25D43B23001B844D /* HealthKit.framework */; };
@@ -51,6 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C0A55B2F25D450810068DA24 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		C0DDCD7625D43385001B844D /* WalkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingView.swift; sourceTree = "<group>"; };
 		C0DDCD7A25D433CA001B844D /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
 		C0DDCD7E25D43B23001B844D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -123,6 +125,7 @@
 				C0FF50C225D316D80052510F /* SceneDelegate.swift */,
 				C0DDCD7A25D433CA001B844D /* HealthStore.swift */,
 				C0DDCD8225D44620001B844D /* Step.swift */,
+				C0A55B2F25D450810068DA24 /* GraphView.swift */,
 				C0FF50C425D316D80052510F /* ContentView.swift */,
 				C0DDCD7625D43385001B844D /* WalkingView.swift */,
 				C0FF50C625D316D90052510F /* Assets.xcassets */,
@@ -270,6 +273,7 @@
 				C0FF50C125D316D80052510F /* AppDelegate.swift in Sources */,
 				C0FF50C325D316D80052510F /* SceneDelegate.swift in Sources */,
 				C0FF50C525D316D80052510F /* ContentView.swift in Sources */,
+				C0A55B3025D450810068DA24 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
