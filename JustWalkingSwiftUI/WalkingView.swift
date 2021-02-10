@@ -14,6 +14,8 @@ struct WalkingView: View {
     
     private var healthStore: HealthStore?
     
+    @State private var steps: [Step] = [Step]()
+    
     init() {
         healthStore = HealthStore()
     }
@@ -26,18 +28,28 @@ struct WalkingView: View {
         statisticsCollection.enumerateStatistics(from: startDate, to: endDate) { (statistics, stop) in
             
             let count = statistics.sumQuantity()?.doubleValue(for: .count())
+            
+            let step = Step(count: Double(count ?? 0.0), date: statistics.startDate)
+            steps.append(step)
         }
         
     }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       
+        List(steps, id: \.id) { step in
+            VStack {
+            Text("\(step.count)")
+                Text(step.date, style: .date)
+                    .opacity(0.5)
+            }
+        }
             .onAppear() {
                 if let healthStore = healthStore {
                     healthStore.requestAuthorization(completion: { (success) in
                         if success {
                             healthStore.calculateSteps { statisticsCollection in
                                 if let statisticsCollection = statisticsCollection {
-                                    
+                                    updateUIFromStatistics(statisticsCollection)
                                 }
                             }
                         }
