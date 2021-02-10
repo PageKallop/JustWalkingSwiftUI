@@ -7,63 +7,62 @@
 
 import WidgetKit
 import SwiftUI
-import Intents
+//import Intents
 
-struct Provider: IntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+struct StepEntry: TimelineEntry {
+    
+    var date: Date = Date()
+    var steps: Int
+}
+
+struct Provider: TimelineProvider {
+   
+    func placeholder(in context: Context) -> StepEntry {
+        
+        return StepEntry(steps: stepCount)
     }
+    
 
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+    typealias Entry = StepEntry
+   
+    @AppStorage("stepCount", store: UserDefaults(suiteName: "Marie.Kallop.JustWalkingSwiftUI"))
+    
+    var stepCount: Int = 0
+   
+    func getSnapshot(in context: Context, completion: @escaping (Entry) -> Void) {
+        
+        let entry = StepEntry(steps: stepCount)
         completion(entry)
     }
-
-    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
-        }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
+    
+    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
+        
+        let entry = StepEntry(steps: stepCount)
+        completion(Timeline(entries: [entry], policy: .never))
     }
+    
 }
 
-struct SimpleEntry: TimelineEntry {
-    let date: Date
-    let configuration: ConfigurationIntent
-}
-
-struct JustWalkingEntryView : View {
-    var entry: Provider.Entry
-
+struct StepView: View {
+    let entry: Provider.Entry
+    
     var body: some View {
-        Text(entry.date, style: .time)
+        Text("\(entry.steps)")
     }
 }
 
 @main
-struct JustWalking: Widget {
-    let kind: String = "JustWalking"
-
+struct StepWidget: Widget {
+    
+    private let kind = "StepWidget"
+    
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            JustWalkingEntryView(entry: entry)
-        }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
-    }
-}
-
-struct JustWalking_Previews: PreviewProvider {
-    static var previews: some View {
-        JustWalkingEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        
+        StaticConfiguration(kind: "StepWidget", provider: Provider(), content: { (entry)  in
+           
+            StepView(entry: entry)
+            
+            
+        })
     }
 }
